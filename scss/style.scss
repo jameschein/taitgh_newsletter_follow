@@ -193,5 +193,18 @@ section.new-drawings {
 
 section.broadsheet {
   background-color: #fff;
-  padding-block: 3%;
+  padding: 6% 0%;
+
+  hgroup {
+    padding-inline: 3% 12%;
+  }
+
+  figure {
+    width: 96vw;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
 }
