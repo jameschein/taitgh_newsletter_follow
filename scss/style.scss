@@ -69,6 +69,7 @@ p {
 
   &.first {
     font-size: 1.25rem;
+    padding-block: 1rem;
   }
 
   &.subhead {
@@ -96,6 +97,18 @@ section {
   hgroup {
     padding-block: 1rem 0.5rem;
     padding-inline: 0 9%;
+
+    h2 {
+      line-height: 1.125;
+
+      & span {
+        display: block;
+
+        &.secondary-heading {
+          text-transform: none;
+        }
+      }
+    }
   }
 }
 
@@ -198,10 +211,6 @@ section.broadsheet {
 
   hgroup {
     padding-inline: 3% 12%;
-
-    h2 span {
-      display: block;
-    }
   }
 
   figure {
