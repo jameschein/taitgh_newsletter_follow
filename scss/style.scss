@@ -24,6 +24,10 @@ $headers: "Playfair Display", serif;
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: $gold-headers;
   padding: 1.5rem 0;
@@ -37,6 +41,11 @@ body {
 header {
   padding: 5%;
   text-align: center;
+
+  .chop {
+    width: 30px;
+    margin-block: 0.25rem;
+  }
 }
 
 a {
@@ -83,11 +92,6 @@ p {
     font-size: 1.25rem;
     padding-right: 24%;
   }
-}
-
-.chop {
-  width: 30px;
-  margin-block: 0.25rem;
 }
 
 section {
@@ -264,6 +268,21 @@ section.giclee {
 
     img {
       width: 47%;
+    }
+  }
+}
+
+footer {
+  a {
+    position: fixed;
+    right: 1rem;
+    bottom: 0.5rem;
+    display: block;
+    img {
+      display: block;
+      transform: rotate(90deg);
+      width: 40px;
+      height: auto;
     }
   }
 }
