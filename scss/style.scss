@@ -92,7 +92,7 @@ p {
 
 section {
   background-color: $section-tan;
-  padding: 6% 3%;
+  padding: 6% 4.5%;
 
   hgroup {
     padding-block: 1rem 0.5rem;
@@ -139,7 +139,7 @@ section.new-drawings {
       flex-direction: column;
 
       .instruction {
-        font-family: Lato, "Gill Sans", sans-serif;
+        font-family: $direction, "Gill Sans", sans-serif;
         text-transform: uppercase;
         letter-spacing: 1px;
         font-size: 0.66rem;
