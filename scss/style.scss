@@ -194,6 +194,7 @@ section.new-drawings {
 section.broadsheet {
   background-color: #fff;
   padding: 6% 0%;
+  position: relative;
 
   hgroup {
     padding-inline: 3% 12%;
@@ -205,10 +206,32 @@ section.broadsheet {
 
   figure {
     width: 96vw;
+    padding-bottom: 7.5rem;
 
     img {
       width: 100%;
       object-fit: contain;
     }
+
+    &.spread {
+      position: absolute;
+      bottom: -4.5%;
+      margin-left: 24vw;
+
+      img {
+        width: 66vw;
+      }
+    }
+  }
+
+  .rider {
+    display: block;
+    font-family: $direction;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    line-height: 1rem;
+    margin-inline: 6% 3%;
+    text-align: right;
   }
 }
