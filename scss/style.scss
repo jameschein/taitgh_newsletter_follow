@@ -1,6 +1,6 @@
 $section-tan: #f2eee7;
 $gold-text: #d7b285;
-$gold-headers: #d6b386;
+$gold-headers: darken($gold-text, 5%);
 
 $link: darken($gold-text, 20%);
 
@@ -9,12 +9,11 @@ $headers: "Playfair Display", serif;
 
 %header-stuff {
   text-transform: uppercase;
-  font-size: 1rem;
   font-weight: 400;
   letter-spacing: 2px;
   font-family: $headers;
   color: $gold-headers;
-  line-height: 1.125;
+  line-height: 1.25;
 }
 
 * {
@@ -26,8 +25,18 @@ $headers: "Playfair Display", serif;
 }
 
 body {
-  color: $gold-text;
+  color: $gold-headers;
   padding: 1.5rem 0;
+}
+
+.wrapper {
+  margin-inline: 3%;
+  margin-block: auto;
+}
+
+header {
+  padding: 5%;
+  text-align: center;
 }
 
 a {
@@ -37,11 +46,12 @@ a {
 h1 {
   @extend %header-stuff;
   font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 0.9rem;
 }
 
 h2 {
   @extend %header-stuff;
-  font-size: 2rem;
+  font-size: 1.5rem;
   letter-spacing: 1px;
 }
 
@@ -53,7 +63,7 @@ h3 {
 }
 
 p {
-  margin-block: 0.5em;
+  margin-block: 0.5rem 0.25rem;
   line-height: 1.125;
 
   &.first {
@@ -75,16 +85,7 @@ p {
 
 .chop {
   width: 30px;
-}
-
-.wrapper {
-  margin-inline: 3%;
-  margin-block: auto;
-}
-
-header {
-  padding: 5%;
-  text-align: center;
+  margin-block: 0.25rem;
 }
 
 section {
@@ -92,7 +93,7 @@ section {
   padding: 6% 3%;
 
   hgroup {
-    padding-block: 1rem 1.5rem;
+    padding-block: 1rem 0.5rem;
     padding-inline: 0 9%;
   }
 }
@@ -100,15 +101,25 @@ section {
 section.new-drawings {
   margin-right: 4.5%;
 
+  .slide {
+    display: block;
+    width: 339px;
+    height: auto;
+    object-fit: contain;
+  }
+
   .slider-controls {
-    width: 34%;
-    padding-block: 1rem;
+    width: 36%;
+    padding-block: 0 1rem;
+    display: flex;
+    flex-direction: column;
 
     .instruction {
       font-family: Lato, "Gill Sans", sans-serif;
       text-transform: uppercase;
       letter-spacing: 1px;
-      font-size: 0.75rem;
+      font-size: 0.66rem;
+      line-height: 1.25;
     }
 
     .indicators {
@@ -120,8 +131,8 @@ section.new-drawings {
       background-color: transparent;
       margin: 0;
       color: currentColor;
-      width: 0.5em;
-      height: 0.5em;
+      width: 0.4em;
+      height: 0.4em;
       border: 1px solid currentColor;
       border-radius: 50%;
     }
@@ -151,11 +162,11 @@ section.new-drawings {
       }
 
       &.last {
-        background-image: url("../images/taitgh-newsletter-button-prev.png");
+        background-image: url("../images/taitgh-newsletter-button-prev.svg");
       }
 
       &.prev {
-        background-image: url("../images/taitgh-newsletter-button-next.png");
+        background-image: url("../images/taitgh-newsletter-button-next.svg");
       }
     }
   }
