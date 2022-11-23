@@ -69,7 +69,7 @@ p {
 
   &.first {
     font-size: 1.25rem;
-    padding-block: 1rem;
+    padding-block: 1rem 0;
   }
 
   &.subhead {
@@ -243,5 +243,26 @@ section.broadsheet {
     line-height: 1rem;
     margin-inline: 6% 3%;
     text-align: right;
+  }
+}
+
+section.giclee {
+  figure {
+    width: 90%;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .print-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    img {
+      width: 47%;
+    }
   }
 }
