@@ -205,8 +205,8 @@ section.broadsheet {
   }
 
   figure {
-    width: 96vw;
-    padding-bottom: 7.5rem;
+    width: 94vw;
+    padding-bottom: 6rem;
 
     img {
       width: 100%;
@@ -214,8 +214,9 @@ section.broadsheet {
     }
 
     &.spread {
+      width: 72%;
       position: absolute;
-      bottom: -4.5%;
+      bottom: -3%;
       margin-left: 24vw;
 
       img {
