@@ -475,5 +475,28 @@ footer {
   }
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 667px) {
+  .new-drawings {
+    .slideshow {
+      .slide-container {
+        height: 475px;
+        margin-block: 0 0.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 736px) {
+  .new-drawings {
+    .slideshow {
+      .slide-container {
+        height: 550px;
+        margin-block: 0 0.5rem;
+      }
+
+      .slider-controls {
+        top: -6rem;
+      }
+    }
+  }
 }
