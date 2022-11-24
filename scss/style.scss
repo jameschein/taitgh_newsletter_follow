@@ -500,3 +500,18 @@ footer {
     }
   }
 }
+
+@media only screen and (min-width: 767px) {
+  .new-drawings {
+    .slideshow {
+      .slide-container {
+        height: 550px;
+        margin-block: 0 0.5rem;
+      }
+
+      .slider-controls {
+        top: -4.5rem;
+      }
+    }
+  }
+}
