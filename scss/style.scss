@@ -16,6 +16,7 @@ $font-headers: "Playfair Display", serif;
 }
 
 .rider {
+  grid-area: rider;
   display: block;
   font-family: $font-direction;
   text-transform: uppercase;
@@ -130,26 +131,21 @@ section {
 }
 
 .new-drawings {
-  .rider {
-    text-align: left;
-    margin: 0;
-    padding-inline: 0 6%;
-
-    span {
-      display: block;
-      padding-inline: 0.5rem 0;
-    }
-  }
-
   .slideshow {
     display: grid;
-    grid-template-columns: 33% 1fr;
+    grid-template-columns: 33% auto;
     gap: 0.5rem;
     grid-template-areas:
+      "intro intro"
       "slide-container slide-container"
       "controls ."
-      "info info";
+      "info info"
+      "rider rider";
     position: relative;
+
+    .slideshow-intro {
+      grid-area: intro;
+    }
 
     .slide-container {
       grid-area: slide-container;
@@ -260,6 +256,17 @@ section {
           &.prev {
             background-image: url("../images/taitgh-newsletter-button-next.svg");
           }
+        }
+      }
+
+      .rider {
+        text-align: left;
+        margin: 0;
+        padding-inline: 0 6%;
+
+        span {
+          display: block;
+          padding-inline: 0.5rem 0;
         }
       }
     }
@@ -440,8 +447,10 @@ footer {
     .slideshow {
       grid-template-columns: 33% 1fr;
       grid-template-areas:
+        "intro intro"
         "slide-container slide-container"
-        "controls info";
+        "controls info"
+        "rider rider";
       justify-content: start;
       gap: 0;
 
@@ -534,14 +543,20 @@ footer {
 }
 
 @media only screen and (min-width: 980px) {
+  section {
+    padding: 6% 3% 3%;
+  }
+
   .new-drawings {
     .slideshow {
-      grid-template-columns: 27% 1fr;
-      grid-template-rows: 50% auto auto;
+      grid-template-columns: 27% 1fr 1fr;
       grid-template-areas:
         "intro slide-container slide-container"
         "info slide-container slide-container"
-        "controls slide-container slide-container";
+        "controls slide-container slide-container"
+        ". slide-container slide-container"
+        ". rider rider";
+      gap: 3rem;
 
       .slideshow-intro {
         grid-area: intro;
@@ -553,21 +568,39 @@ footer {
         p {
           &.first {
             color: $col-gold-text;
+            font-size: 1.125rem;
           }
         }
       }
 
       .slide-container {
-        height: 650px;
+        height: 590px;
         margin-block: 0 0.5rem;
       }
 
       .slider-controls {
         position: static;
+        width: 100%;
+
+        p {
+          text-align: right;
+        }
+
+        .indicators {
+          justify-content: end;
+          gap: 0.5rem;
+        }
       }
 
-      .slide-info {
-        text-align: right;
+      .slide-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      hgroup.slide-info {
+        padding-inline: 6% 0;
+        margin-block: 0rem;
 
         h3 {
           font-size: 2.5rem;
@@ -578,7 +611,17 @@ footer {
           &.slide-caption {
             color: $col-gold-text;
             padding: 0;
+            font-size: 1rem;
           }
+        }
+      }
+
+      .rider {
+        grid-area: rider;
+        text-align: left;
+
+        span {
+          display: inline;
         }
       }
     }
