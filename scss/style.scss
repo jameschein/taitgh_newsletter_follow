@@ -76,10 +76,10 @@ h2 {
 
 h3 {
   @extend %header-standard;
-  font-size: 2rem;
+  font-size: 1.66rem;
   text-transform: capitalize;
   letter-spacing: 0;
-  padding-block: 1rem;
+  padding-block: 0 1rem;
 }
 
 p {
@@ -133,7 +133,7 @@ section {
   .rider {
     text-align: left;
     margin: 0;
-    padding-inline: 0 12%;
+    padding-inline: 0 6%;
 
     span {
       display: block;
@@ -143,18 +143,18 @@ section {
 
   .slideshow {
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 33% 1fr;
+    gap: 0.5rem;
     grid-template-areas:
-      "slide-container"
-      "controls"
-      "info";
-
+      "slide-container slide-container"
+      "controls ."
+      "info info";
     position: relative;
 
     .slide-container {
       grid-area: slide-container;
       width: 105%;
-      height: 380px;
+      height: 320px;
       margin-block: 0 0.5rem;
 
       .slide.landscape {
@@ -176,13 +176,31 @@ section {
       }
     }
 
+    hgroup.slide-info {
+      grid-area: info;
+      margin-left: 0%;
+      margin-block: 1rem;
+
+      .slide-caption {
+        font-size: 1.25rem;
+        padding-right: 12%;
+        margin-block: 0 1rem;
+      }
+
+      h3 {
+        margin-block: 0;
+        line-height: 1;
+      }
+    }
+
     .slider-controls {
+      position: absolute;
+      top: -6rem;
       grid-area: controls;
-      width: 31.5%;
+      width: 100%;
       padding-block: 0.5rem 0;
       display: flex;
       flex-direction: column;
-      margin-top: -7rem;
 
       .instruction {
         font-family: $font-direction, "Gill Sans", sans-serif;
@@ -243,22 +261,6 @@ section {
             background-image: url("../images/taitgh-newsletter-button-next.svg");
           }
         }
-      }
-    }
-
-    hgroup.slide-info {
-      grid-area: info;
-      margin-left: 0%;
-
-      .slide-caption {
-        font-size: 1.25rem;
-        padding-right: 24%;
-        margin-block: 0 1rem;
-      }
-
-      h3 {
-        margin-block: 0;
-        line-height: 1;
       }
     }
   }
@@ -423,20 +425,30 @@ footer {
   }
 }
 
-@media only screen and (min-width: 376px) {
-}
-
-@media only screen and (min-width: 536px) {
+@media only screen and (min-width: 414px) {
   .new-drawings {
     .slideshow {
-      grid-template-columns: 40% 1fr;
+      .slider-controls {
+        top: -5.25rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 568px) {
+  .new-drawings {
+    .slideshow {
+      grid-template-columns: 33% 1fr;
       grid-template-areas:
         "slide-container slide-container"
-        "controls ."
-        "info info";
+        "controls info";
       justify-content: start;
+      gap: 0;
 
       .slide-container {
+        height: 400px;
+        margin-block: 0 0.5rem;
+
         .slide {
           margin: 0 4.5rem 0 auto;
           width: 105%;
@@ -445,13 +457,12 @@ footer {
 
       .slider-controls {
         grid-area: controls;
-        position: static;
         width: 60%;
-        margin-top: -3rem;
+        top: -3rem;
       }
 
       .slider-info {
-        grid-are: info;
+        grid-area: info;
         width: 100%;
 
         hgroup {
