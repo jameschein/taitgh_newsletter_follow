@@ -21,7 +21,7 @@ $font-headers: "Playfair Display", serif;
   text-transform: uppercase;
   font-size: 0.6rem;
   letter-spacing: 1px;
-  line-height: 1rem;
+  line-height: 0.85rem;
   margin-inline: 6% 3%;
   text-align: right;
 }
@@ -153,27 +153,35 @@ section {
 
     .slide-container {
       grid-area: slide-container;
-      width: 90vw;
-      height: 330px;
+      width: 105%;
+      height: 380px;
 
-      .slide {
+      .slide.landscape {
         display: block;
         margin: 0 0 0 auto;
-        width: auto;
-        height: 100%;
-        object-fit: contain;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border: 1px solid $col-gold-text;
+      }
+
+      .slide.portrait {
+        display: block;
+        margin: 0 0 0 auto;
+        width: 69%;
+        height: auto;
+        object-fit: cover;
         border: 1px solid $col-gold-text;
       }
     }
 
     .slider-controls {
       grid-area: controls;
-      position: absolute;
-      bottom: 30%;
       width: 31.5%;
-      padding-block: 0 1rem;
+      padding-block: 0.5rem 0;
       display: flex;
       flex-direction: column;
+      margin-top: -6rem;
 
       .instruction {
         font-family: $font-direction, "Gill Sans", sans-serif;
