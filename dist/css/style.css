@@ -76,7 +76,13 @@ p {
 }
 p.first {
   font-size: 1.25rem;
-  padding-block: 1rem 0;
+  padding-block: 0.5rem;
+}
+p.first span {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0;
+  line-height: 1.25;
 }
 p.subhead {
   font-family: "Lato", sans-serif;
@@ -104,32 +110,34 @@ section hgroup h2 span.secondary-heading {
   text-transform: none;
 }
 
-section.new-drawings .rider {
+.new-drawings .rider {
   text-align: left;
   margin: 0;
   padding-inline: 0 12%;
 }
-section.new-drawings .rider span {
+.new-drawings .rider span {
   display: block;
   padding-inline: 0.5rem 0;
 }
-section.new-drawings .slideshow {
+.new-drawings .slideshow {
   display: grid;
-  grid-template-areas: "slide" "controls" "info";
+  grid-template-columns: 100%;
+  grid-template-areas: "slide-container" "controls" "info";
   position: relative;
 }
-section.new-drawings .slideshow figure {
-  grid-area: slide;
+.new-drawings .slideshow .slide-container {
+  grid-area: slide-container;
   width: 90vw;
   height: 330px;
   text-align: right;
 }
-section.new-drawings .slideshow .slide {
+.new-drawings .slideshow .slide-container .slide {
   width: auto;
   height: 100%;
   object-fit: contain;
+  border: 1px solid #d7b285;
 }
-section.new-drawings .slideshow .slider-controls {
+.new-drawings .slideshow .slider-controls {
   grid-area: controls;
   position: absolute;
   bottom: 30%;
@@ -138,7 +146,7 @@ section.new-drawings .slideshow .slider-controls {
   display: flex;
   flex-direction: column;
 }
-section.new-drawings .slideshow .slider-controls .instruction {
+.new-drawings .slideshow .slider-controls .instruction {
   font-family: "Lato", sans-serif, "Gill Sans", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -147,12 +155,12 @@ section.new-drawings .slideshow .slider-controls .instruction {
   padding-left: 0.25rem;
   margin-bottom: 0.5rem;
 }
-section.new-drawings .slideshow .slider-controls .indicators {
+.new-drawings .slideshow .slider-controls .indicators {
   margin-block: 0 1rem;
   display: flex;
   justify-content: space-evenly;
 }
-section.new-drawings .slideshow .slider-controls .indicator {
+.new-drawings .slideshow .slider-controls .indicator {
   appearance: none;
   background-color: transparent;
   margin: 0;
@@ -162,16 +170,16 @@ section.new-drawings .slideshow .slider-controls .indicator {
   border: 1px solid currentColor;
   border-radius: 50%;
 }
-section.new-drawings .slideshow .slider-controls .indicator:checked {
+.new-drawings .slideshow .slider-controls .indicator:checked {
   background-color: #d7b285;
 }
-section.new-drawings .slideshow .slider-controls .button-group {
+.new-drawings .slideshow .slider-controls .button-group {
   display: flex;
   justify-content: end;
   gap: 0.5rem;
   padding-right: 0.5rem;
 }
-section.new-drawings .slideshow .slider-controls .button-group .arrow {
+.new-drawings .slideshow .slider-controls .button-group .arrow {
   cursor: pointer;
   width: 27px;
   height: 27px;
@@ -181,72 +189,72 @@ section.new-drawings .slideshow .slider-controls .button-group .arrow {
   background-size: contain;
   outline: 0;
 }
-section.new-drawings .slideshow .slider-controls .button-group .arrow button::-moz-focus-inner {
+.new-drawings .slideshow .slider-controls .button-group .arrow button::-moz-focus-inner {
   border: 0;
 }
-section.new-drawings .slideshow .slider-controls .button-group .arrow.last {
+.new-drawings .slideshow .slider-controls .button-group .arrow.last {
   background-image: url("../images/taitgh-newsletter-button-prev.svg");
 }
-section.new-drawings .slideshow .slider-controls .button-group .arrow.prev {
+.new-drawings .slideshow .slider-controls .button-group .arrow.prev {
   background-image: url("../images/taitgh-newsletter-button-next.svg");
 }
-section.new-drawings .slideshow hgroup.slide-info {
+.new-drawings .slideshow hgroup.slide-info {
   grid-area: info;
   margin-left: 0%;
 }
-section.new-drawings .slideshow hgroup.slide-info .slide-caption {
+.new-drawings .slideshow hgroup.slide-info .slide-caption {
   font-size: 1.25rem;
   padding-right: 24%;
   margin-block: 0 1rem;
 }
-section.new-drawings .slideshow hgroup.slide-info h3 {
+.new-drawings .slideshow hgroup.slide-info h3 {
   margin-block: 0;
   line-height: 1;
 }
 
-section.broadsheet {
+.broadsheet {
   background-color: #fff;
   padding: 6% 0%;
   position: relative;
 }
-section.broadsheet hgroup {
+.broadsheet hgroup {
   padding-inline: 3% 12%;
 }
-section.broadsheet figure {
-  width: 94vw;
+.broadsheet figure {
+  width: 94%;
   padding-bottom: 6rem;
 }
-section.broadsheet figure img {
+.broadsheet figure img {
   width: 100%;
   object-fit: contain;
 }
-section.broadsheet figure.spread {
+.broadsheet figure.spread {
   width: 72%;
   position: absolute;
   bottom: -3%;
   margin-left: 24vw;
 }
-section.broadsheet figure.spread img {
+.broadsheet figure.spread img {
   width: 66vw;
 }
 
-section.giclee {
+.giclee {
   background: rgb(240, 237, 231);
   background: linear-gradient(180deg, rgb(240, 237, 231) 0%, rgb(240, 237, 231) 96%, rgb(255, 255, 255) 96%, rgb(255, 255, 255) 100%);
 }
-section.giclee figure {
+.giclee figure {
   width: 90%;
 }
-section.giclee figure img {
+.giclee figure img {
   width: 100%;
   object-fit: contain;
 }
-section.giclee .print-wrap {
+.giclee .print-wrap {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
-section.giclee .print-wrap img {
+.giclee .print-wrap img {
   display: block;
   border: 1px solid #f2eee7;
   width: 47%;
@@ -333,6 +341,24 @@ footer .return-to-top a img {
   transform: rotate(90deg);
   width: 40px;
   height: auto;
+}
+
+@media only screen and (min-width: 960px) {
+  .new-drawings .slideshow {
+    grid-template-columns: 33% 1fr;
+    grid-template-areas: "info slide-container" "controls slide-container";
+  }
+  .new-drawings .slideshow .slide-container {
+    width: 100%;
+    grid-area: slide-container;
+  }
+  .new-drawings .slideshow .slider-controls {
+    grid-area: controls;
+    position: static;
+  }
+  .new-drawings .slideshow .slider-info {
+    grid-are: info;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

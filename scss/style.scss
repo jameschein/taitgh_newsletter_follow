@@ -88,7 +88,14 @@ p {
 
   &.first {
     font-size: 1.25rem;
-    padding-block: 1rem 0;
+    padding-block: 0.5rem;
+
+    span {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 0;
+      line-height: 1.25;
+    }
   }
 
   &.subhead {
@@ -122,11 +129,12 @@ section {
   }
 }
 
-section.new-drawings {
+.new-drawings {
   .rider {
     text-align: left;
     margin: 0;
     padding-inline: 0 12%;
+
     span {
       display: block;
       padding-inline: 0.5rem 0;
@@ -135,23 +143,26 @@ section.new-drawings {
 
   .slideshow {
     display: grid;
+    grid-template-columns: 100%;
     grid-template-areas:
-      "slide"
+      "slide-container"
       "controls"
       "info";
+
     position: relative;
 
-    figure {
-      grid-area: slide;
+    .slide-container {
+      grid-area: slide-container;
       width: 90vw;
       height: 330px;
       text-align: right;
-    }
 
-    .slide {
-      width: auto;
-      height: 100%;
-      object-fit: contain;
+      .slide {
+        width: auto;
+        height: 100%;
+        object-fit: contain;
+        border: 1px solid $col-gold-text;
+      }
     }
 
     .slider-controls {
@@ -243,7 +254,7 @@ section.new-drawings {
   }
 }
 
-section.broadsheet {
+.broadsheet {
   background-color: #fff;
   padding: 6% 0%;
   position: relative;
@@ -253,7 +264,7 @@ section.broadsheet {
   }
 
   figure {
-    width: 94vw;
+    width: 94%;
     padding-bottom: 6rem;
 
     img {
@@ -274,7 +285,7 @@ section.broadsheet {
   }
 }
 
-section.giclee {
+.giclee {
   background: rgb(240, 237, 231);
   background: linear-gradient(
     180deg,
@@ -409,4 +420,26 @@ footer {
 }
 
 @media only screen and (min-width: 960px) {
+  .new-drawings {
+    .slideshow {
+      grid-template-columns: 33% 1fr;
+      grid-template-areas:
+        "info slide-container"
+        "controls slide-container";
+
+      .slide-container {
+        width: 100%;
+        grid-area: slide-container;
+      }
+
+      .slider-controls {
+        grid-area: controls;
+        position: static;
+      }
+
+      .slider-info {
+        grid-are: info;
+      }
+    }
+  }
 }
