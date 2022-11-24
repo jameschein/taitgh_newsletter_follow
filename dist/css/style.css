@@ -343,7 +343,7 @@ footer .return-to-top a img {
   height: auto;
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 768px) {
   .new-drawings .slideshow {
     grid-template-columns: 33% 1fr;
     grid-template-areas: "info slide-container" "controls slide-container";

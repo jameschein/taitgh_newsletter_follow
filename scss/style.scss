@@ -417,9 +417,6 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
-}
-
-@media only screen and (min-width: 960px) {
   .new-drawings {
     .slideshow {
       grid-template-columns: 33% 1fr;
@@ -442,4 +439,7 @@ footer {
       }
     }
   }
+}
+
+@media only screen and (min-width: 960px) {
 }
