@@ -155,9 +155,10 @@ section {
       grid-area: slide-container;
       width: 90vw;
       height: 330px;
-      text-align: right;
 
       .slide {
+        display: block;
+        margin: 0 0 0 auto;
         width: auto;
         height: 100%;
         object-fit: contain;
@@ -416,26 +417,39 @@ footer {
 @media only screen and (min-width: 376px) {
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 536px) {
   .new-drawings {
     .slideshow {
       grid-template-columns: 33% 1fr;
       grid-template-areas:
-        "info slide-container"
-        "controls slide-container";
+        "slide-container slide-container"
+        "controls info ";
+      justify-content: start;
 
       .slide-container {
         width: 100%;
         grid-area: slide-container;
+
+        .slide {
+          margin: 0 4.5rem 0 auto;
+        }
       }
 
       .slider-controls {
         grid-area: controls;
         position: static;
+        width: 60%;
       }
 
       .slider-info {
         grid-are: info;
+        width: 100%;
+
+        hgroup {
+          width: 100%;
+          padding: 0;
+          margin: 0;
+        }
       }
     }
   }
