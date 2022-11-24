@@ -429,18 +429,17 @@ footer {
 @media only screen and (min-width: 536px) {
   .new-drawings {
     .slideshow {
-      grid-template-columns: 33% 1fr;
+      grid-template-columns: 40% 1fr;
       grid-template-areas:
         "slide-container slide-container"
-        "controls info ";
+        "controls ."
+        "info info";
       justify-content: start;
 
       .slide-container {
-        width: 100%;
-        grid-area: slide-container;
-
         .slide {
           margin: 0 4.5rem 0 auto;
+          width: 105%;
         }
       }
 
@@ -448,6 +447,7 @@ footer {
         grid-area: controls;
         position: static;
         width: 60%;
+        margin-top: -3rem;
       }
 
       .slider-info {
