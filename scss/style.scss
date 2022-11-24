@@ -515,3 +515,72 @@ footer {
     }
   }
 }
+
+@media only screen and (min-width: 833px) {
+  .new-drawings {
+    .slideshow {
+      grid-template-columns: 27% 1fr;
+
+      .slide-container {
+        height: 650px;
+        margin-block: 0 0.5rem;
+      }
+
+      .slider-controls {
+        top: -9rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  .new-drawings {
+    .slideshow {
+      grid-template-columns: 27% 1fr;
+      grid-template-rows: 50% auto auto;
+      grid-template-areas:
+        "intro slide-container slide-container"
+        "info slide-container slide-container"
+        "controls slide-container slide-container";
+
+      .slideshow-intro {
+        grid-area: intro;
+
+        h2 {
+          color: $col-gold-text;
+        }
+
+        p {
+          &.first {
+            color: $col-gold-text;
+          }
+        }
+      }
+
+      .slide-container {
+        height: 650px;
+        margin-block: 0 0.5rem;
+      }
+
+      .slider-controls {
+        position: static;
+      }
+
+      .slide-info {
+        text-align: right;
+
+        h3 {
+          font-size: 2.5rem;
+          color: $col-gold-text;
+        }
+
+        p {
+          &.slide-caption {
+            color: $col-gold-text;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
