@@ -554,6 +554,10 @@ footer {
     color: $col-gold-text;
   }
 
+  h2 {
+    font-size: 2rem;
+  }
+
   p {
     font-size: 1.125rem;
 
@@ -673,7 +677,6 @@ footer {
 
         h2 {
           font-size: 2.75rem;
-          color: $col-gold-text;
         }
 
         p {
@@ -729,7 +732,7 @@ footer {
       grid-area: gicleeinfo;
 
       hgroup {
-        padding-inline: 1rem 0;
+        padding-inline: 2rem 7.5rem;
       }
 
       figure {
@@ -742,9 +745,13 @@ footer {
 
     .print-wrap {
       grid-area: gicleeprintwrap;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
 
       img {
-        width: 30%;
+        width: 100%;
+        object-fit: contain;
+        line-height: 1;
       }
     }
   }

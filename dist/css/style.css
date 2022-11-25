@@ -428,6 +428,9 @@ footer .return-to-top a img {
   p {
     color: #c6ac82;
   }
+  h2 {
+    font-size: 2rem;
+  }
   p {
     font-size: 1.125rem;
   }
@@ -510,7 +513,6 @@ footer .return-to-top a img {
   }
   .broadsheet .broadsheet-info .broadsheet-text h2 {
     font-size: 2.75rem;
-    color: #c6ac82;
   }
   .broadsheet .broadsheet-info .broadsheet-text p {
     padding-inline: 0rem 3rem;
@@ -550,7 +552,7 @@ footer .return-to-top a img {
     grid-area: gicleeinfo;
   }
   .giclee .giclee-info hgroup {
-    padding-inline: 1rem 0;
+    padding-inline: 2rem 7.5rem;
   }
   .giclee .giclee-info figure {
     width: 100%;
@@ -560,9 +562,13 @@ footer .return-to-top a img {
   }
   .giclee .print-wrap {
     grid-area: gicleeprintwrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
   .giclee .print-wrap img {
-    width: 30%;
+    width: 100%;
+    object-fit: contain;
+    line-height: 1;
   }
   footer .taitgh-cta {
     padding: 1rem 3rem;
