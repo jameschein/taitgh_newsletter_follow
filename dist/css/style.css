@@ -3,7 +3,7 @@ h3, h2, h1 {
   font-weight: 400;
   letter-spacing: 2px;
   font-family: "Playfair Display", serif;
-  color: #c48e4b;
+  color: #ad894f;
   line-height: 1.25;
 }
 
@@ -32,7 +32,7 @@ html {
 }
 
 body {
-  color: #c48e4b;
+  color: #ad894f;
   padding: 1.5rem 0;
 }
 
@@ -51,7 +51,7 @@ header .chop {
 }
 
 a {
-  color: #936630;
+  color: #785f37;
 }
 
 h1 {
@@ -133,7 +133,7 @@ section hgroup h2 span.secondary-heading {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border: 1px solid #d7b285;
+  border: 1px solid #c6ac82;
 }
 .new-drawings .slideshow .slide-container .slide.landscape {
   width: 100%;
@@ -188,7 +188,7 @@ section hgroup h2 span.secondary-heading {
   border-radius: 50%;
 }
 .new-drawings .slideshow .slider-controls .indicator:checked {
-  background-color: #d7b285;
+  background-color: #c6ac82;
 }
 .new-drawings .slideshow .slider-controls .button-group {
   display: flex;
@@ -226,29 +226,46 @@ section hgroup h2 span.secondary-heading {
 }
 
 .broadsheet {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas: "broadsheettext" "hero" "rider";
   background-color: #fff;
-  padding: 6% 0%;
+  padding-block: 3rem;
+  padding-inline: 0rem;
   position: relative;
 }
-.broadsheet hgroup {
-  padding-inline: 3% 12%;
-}
-.broadsheet figure {
-  width: 94%;
+.broadsheet .hero {
+  grid-area: hero;
+  width: 100%;
   padding-bottom: 6rem;
 }
-.broadsheet figure img {
+.broadsheet .hero img {
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
-.broadsheet figure.spread {
-  width: 72%;
+.broadsheet .broadsheet-text {
+  grid-area: broadsheettext;
+  padding-inline: 3% 12%;
+}
+.broadsheet .broadsheet-text h2 {
+  line-height: 1.125;
+}
+.broadsheet .broadsheet-text h2 span {
+  display: block;
+}
+.broadsheet .spread {
+  width: 65%;
   position: absolute;
-  bottom: -3%;
   margin-left: 24vw;
+  bottom: 5.25rem;
+  right: 2rem;
 }
-.broadsheet figure.spread img {
+.broadsheet .spread img {
   width: 66vw;
+}
+.broadsheet .rider {
+  grid-area: rider;
+  padding-block: 3rem 0;
 }
 
 .giclee {
@@ -297,10 +314,10 @@ footer .logotype {
   font-weight: 100;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.25rem;
-  color: #d7b285;
+  color: #c6ac82;
 }
 footer .subhead {
-  color: #d7b285;
+  color: #c6ac82;
 }
 footer .socials {
   margin-block: 1rem;
@@ -314,7 +331,7 @@ footer .socials a {
   width: 24px;
   height: 24px;
   overflow: hidden;
-  color: #d7b285;
+  color: #c6ac82;
 }
 footer .socials a span {
   display: block;
@@ -335,7 +352,7 @@ footer .byline span {
   font-size: 0.75rem;
   margin-block: 0.25rem;
   letter-spacing: 2px;
-  color: #d7b285;
+  color: #c6ac82;
   padding-right: 0.5rem;
 }
 footer .byline span img {
@@ -406,6 +423,22 @@ footer .return-to-top a img {
   section {
     padding: 6% 3% 3%;
   }
+  .logotype,
+  h2,
+  p {
+    color: #c6ac82;
+  }
+  p {
+    font-size: 1.125rem;
+  }
+  p.first {
+    font-size: 1.33rem;
+  }
+  .new-drawings {
+    margin-inline: 6rem;
+    background: rgb(240, 237, 231);
+    background: linear-gradient(90deg, rgb(240, 237, 231) 0%, rgb(240, 237, 231) 96%, rgb(255, 255, 255) 96%, rgb(255, 255, 255) 100%);
+  }
   .new-drawings .slideshow {
     grid-template-columns: 27% 1fr 1fr;
     grid-template-areas: "intro slide-container slide-container" "info slide-container slide-container" "controls slide-container slide-container" ". slide-container slide-container" ". rider rider";
@@ -415,11 +448,11 @@ footer .return-to-top a img {
     grid-area: intro;
   }
   .new-drawings .slideshow .slideshow-intro h2 {
-    color: #d7b285;
+    color: #c6ac82;
+    font-size: 1.75rem;
   }
   .new-drawings .slideshow .slideshow-intro p.first {
-    color: #d7b285;
-    font-size: 1.125rem;
+    color: #c6ac82;
   }
   .new-drawings .slideshow .slide-container {
     margin-block: 0 0.5rem;
@@ -447,11 +480,11 @@ footer .return-to-top a img {
     margin-block: 0rem;
   }
   .new-drawings .slideshow hgroup.slide-info h3 {
-    font-size: 2.5rem;
-    color: #d7b285;
+    font-size: 2.75rem;
+    color: #c6ac82;
   }
   .new-drawings .slideshow hgroup.slide-info p.slide-caption {
-    color: #d7b285;
+    color: #c6ac82;
     padding: 0;
     font-size: 1rem;
   }
@@ -461,6 +494,82 @@ footer .return-to-top a img {
   }
   .new-drawings .slideshow .rider span {
     display: inline;
+  }
+  .broadsheet {
+    grid-template-columns: 69% 7.5% 23.5%;
+    grid-template-areas: "hero . ." "hero . broadsheettext" "hero . spread" "rider rider rider";
+    gap: 1rem;
+    padding-inline: 0 6rem;
+  }
+  .broadsheet .broadsheet-info {
+    grid-area: 2/2/3/4;
+    column-span: 2/4;
+  }
+  .broadsheet .broadsheet-info .broadsheet-text {
+    padding-inline: 1rem 2rem;
+  }
+  .broadsheet .broadsheet-info .broadsheet-text h2 {
+    font-size: 2.75rem;
+    color: #c6ac82;
+  }
+  .broadsheet .broadsheet-info .broadsheet-text p {
+    padding-inline: 0rem 3rem;
+  }
+  .broadsheet .broadsheet-info .broadsheet-text p.first {
+    font-size: 1.33rem;
+  }
+  .broadsheet .hero {
+    grid-area: 1/1/3/3;
+    padding: 0;
+    margin: 0;
+  }
+  .broadsheet .spread {
+    grid-area: 2/2/3/4;
+    width: 96%;
+    margin: 0;
+    padding: 1rem 0rem 0 0;
+    position: static;
+  }
+  .broadsheet .spread img {
+    width: 100%;
+  }
+  .broadsheet .rider {
+    padding: 0;
+  }
+  .giclee {
+    padding: 6% 1% 4.5% 3%;
+    display: grid;
+    grid-template-columns: 54% 1fr;
+    grid-template-areas: "gicleeprintwrap gicleeinfo";
+    background: rgb(240, 237, 231);
+    background: linear-gradient(180deg, rgb(240, 237, 231) 0%, rgb(240, 237, 231) 87%, rgb(255, 255, 255) 87%, rgb(255, 255, 255) 100%);
+    margin: 0 6rem 6rem;
+    gap: 2rem;
+  }
+  .giclee .giclee-info {
+    grid-area: gicleeinfo;
+  }
+  .giclee .giclee-info hgroup {
+    padding-inline: 1rem 0;
+  }
+  .giclee .giclee-info figure {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-content: center;
+  }
+  .giclee .print-wrap {
+    grid-area: gicleeprintwrap;
+  }
+  .giclee .print-wrap img {
+    width: 30%;
+  }
+  footer .taitgh-cta {
+    padding: 1rem 3rem;
+    font-size: 1.33rem;
+  }
+  footer .logotype {
+    letter-spacing: 1px;
   }
 }
 

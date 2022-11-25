@@ -1,5 +1,5 @@
 $col-section-tan: #f2eee7;
-$col-gold-text: #d7b285;
+$col-gold-text: #c6ac82;
 $col-gold-headers: darken($col-gold-text, 15%);
 $col-link: darken($col-gold-text, 30%);
 
@@ -275,33 +275,55 @@ section {
 }
 
 .broadsheet {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "broadsheettext"
+    "hero"
+    "rider";
   background-color: #fff;
-  padding: 6% 0%;
+  padding-block: 3rem;
+  padding-inline: 0rem;
   position: relative;
 
-  hgroup {
-    padding-inline: 3% 12%;
-  }
-
-  figure {
-    width: 94%;
+  .hero {
+    grid-area: hero;
+    width: 100%;
     padding-bottom: 6rem;
 
     img {
       width: 100%;
-      object-fit: contain;
+      object-fit: cover;
     }
+  }
 
-    &.spread {
-      width: 72%;
-      position: absolute;
-      bottom: -3%;
-      margin-left: 24vw;
+  .broadsheet-text {
+    grid-area: broadsheettext;
+    padding-inline: 3% 12%;
 
-      img {
-        width: 66vw;
+    h2 {
+      line-height: 1.125;
+      span {
+        display: block;
       }
     }
+  }
+
+  .spread {
+    width: 65%;
+    position: absolute;
+    margin-left: 24vw;
+    bottom: 5.25rem;
+    right: 2rem;
+
+    img {
+      width: 66vw;
+    }
+  }
+
+  .rider {
+    grid-area: rider;
+    padding-block: 3rem 0;
   }
 }
 
@@ -526,7 +548,31 @@ footer {
     padding: 6% 3% 3%;
   }
 
+  .logotype,
+  h2,
+  p {
+    color: $col-gold-text;
+  }
+
+  p {
+    font-size: 1.125rem;
+
+    &.first {
+      font-size: 1.33rem;
+    }
+  }
+
   .new-drawings {
+    margin-inline: 6rem;
+    background: rgb(240, 237, 231);
+    background: linear-gradient(
+      90deg,
+      rgba(240, 237, 231, 1) 0%,
+      rgba(240, 237, 231, 1) 96%,
+      rgba(255, 255, 255, 1) 96%,
+      rgba(255, 255, 255, 1) 100%
+    );
+
     .slideshow {
       grid-template-columns: 27% 1fr 1fr;
       grid-template-areas:
@@ -542,12 +588,12 @@ footer {
 
         h2 {
           color: $col-gold-text;
+          font-size: 1.75rem;
         }
 
         p {
           &.first {
             color: $col-gold-text;
-            font-size: 1.125rem;
           }
         }
       }
@@ -584,7 +630,7 @@ footer {
         margin-block: 0rem;
 
         h3 {
-          font-size: 2.5rem;
+          font-size: 2.75rem;
           color: $col-gold-text;
         }
 
@@ -605,6 +651,112 @@ footer {
           display: inline;
         }
       }
+    }
+  }
+
+  .broadsheet {
+    grid-template-columns: 69% 7.5% 23.5%;
+    grid-template-areas:
+      "hero . ."
+      "hero . broadsheettext"
+      "hero . spread"
+      "rider rider rider";
+    gap: 1rem;
+    padding-inline: 0 6rem;
+
+    .broadsheet-info {
+      grid-area: 2/2/3/4;
+      column-span: 2/4;
+
+      .broadsheet-text {
+        padding-inline: 1rem 2rem;
+
+        h2 {
+          font-size: 2.75rem;
+          color: $col-gold-text;
+        }
+
+        p {
+          padding-inline: 0rem 3rem;
+
+          &.first {
+            font-size: 1.33rem;
+          }
+        }
+      }
+    }
+
+    .hero {
+      grid-area: 1/1/3/3;
+      padding: 0;
+      margin: 0;
+    }
+
+    .spread {
+      grid-area: 2/2/3/4;
+      width: 96%;
+      margin: 0;
+      padding: 1rem 0rem 0 0;
+      position: static;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .rider {
+      padding: 0;
+    }
+  }
+
+  .giclee {
+    padding: 6% 1% 4.5% 3%;
+    display: grid;
+    grid-template-columns: 54% 1fr;
+    grid-template-areas: "gicleeprintwrap gicleeinfo";
+    background: rgb(240, 237, 231);
+    background: linear-gradient(
+      180deg,
+      rgba(240, 237, 231, 1) 0%,
+      rgba(240, 237, 231, 1) 87%,
+      rgba(255, 255, 255, 1) 87%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    margin: 0 6rem 6rem;
+    gap: 2rem;
+
+    .giclee-info {
+      grid-area: gicleeinfo;
+
+      hgroup {
+        padding-inline: 1rem 0;
+      }
+
+      figure {
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        align-content: center;
+      }
+    }
+
+    .print-wrap {
+      grid-area: gicleeprintwrap;
+
+      img {
+        width: 30%;
+      }
+    }
+  }
+
+  footer {
+    .taitgh-cta {
+      padding: 1rem 3rem;
+      font-size: 1.33rem;
+    }
+
+    .logotype {
+      letter-spacing: 1px;
     }
   }
 }
