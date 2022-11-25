@@ -1,0 +1,65 @@
+@media only screen and (min-width: 414px) {
+}
+
+@media only screen and (min-width: 568px) {
+  .new-drawings {
+    .slideshow {
+      grid-template-columns: 33% 1fr;
+      grid-template-areas:
+        "intro intro"
+        "slide-container slide-container"
+        "controls info"
+        "rider rider";
+      justify-content: start;
+      gap: 0;
+
+      .slide-container {
+        // height: 400px;
+        margin-block: 0 0.5rem;
+
+        .slide {
+          margin: 0 4.5rem 0 auto;
+          width: 105%;
+        }
+      }
+
+      .slider-controls {
+        grid-area: controls;
+        width: 60%;
+      }
+
+      .slider-info {
+        grid-area: info;
+        width: 100%;
+
+        hgroup {
+          width: 100%;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 667px) {
+  .new-drawings {
+    .slideshow {
+      .slide-container {
+        // height: 475px;
+        margin-block: 0 0.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 736px) {
+  .new-drawings {
+    .slideshow {
+      .slide-container {
+        // height: 550px;
+        margin-block: 0 0.5rem;
+      }
+    }
+  }
+}

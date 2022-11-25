@@ -411,6 +411,15 @@ footer .return-to-top a img {
     margin-block: 0 0.5rem;
   }
 }
+@media only screen and (min-width: 767px) {
+  .giclee .print-wrap {
+    display: grid;
+    grid-template-columns: 31.5% 31.5% 31.5%;
+  }
+  .giclee .print-wrap img {
+    width: 100%;
+  }
+}
 @media only screen and (min-width: 833px) {
   .new-drawings .slideshow {
     grid-template-columns: 27% 1fr;
@@ -420,6 +429,174 @@ footer .return-to-top a img {
   }
 }
 @media only screen and (min-width: 980px) {
+  .wrapper {
+    margin-inline: 0;
+  }
+  section {
+    padding: 6% 3% 3%;
+    margin-inline: 3%;
+  }
+  .logotype,
+  h2,
+  p {
+    color: #c6ac82;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.125rem;
+  }
+  p.first {
+    font-size: 1.33rem;
+  }
+  .new-drawings {
+    background: rgb(240, 237, 231);
+    background: linear-gradient(90deg, rgb(240, 237, 231) 0%, rgb(240, 237, 231) 96%, rgb(255, 255, 255) 96%, rgb(255, 255, 255) 100%);
+  }
+  .new-drawings .slideshow {
+    grid-template-columns: 28.5% 1fr 1fr;
+    grid-template-areas: "intro slide-container slide-container" "info slide-container slide-container" "controls slide-container slide-container" ". slide-container slide-container" ". rider rider";
+    gap: 2rem;
+  }
+  .new-drawings .slideshow .slideshow-intro {
+    grid-area: intro;
+  }
+  .new-drawings .slideshow .slideshow-intro h2 {
+    color: #c6ac82;
+    font-size: 1.75rem;
+  }
+  .new-drawings .slideshow .slideshow-intro p.first {
+    color: #c6ac82;
+  }
+  .new-drawings .slideshow .slideshow-intro p.first span {
+    display: inline;
+  }
+  .new-drawings .slideshow .slide-container {
+    margin-block: 0 0.5rem;
+    display: grid;
+    grid-template-areas: "slide";
+    grid-template-columns: 100%;
+    justify-content: center;
+    align-items: end;
+  }
+  .new-drawings .slideshow .slide-container .slide {
+    grid-area: slide;
+  }
+  .new-drawings .slideshow .slider-controls {
+    width: 100%;
+  }
+  .new-drawings .slideshow .slider-controls p {
+    text-align: right;
+  }
+  .new-drawings .slideshow .slider-controls .indicators {
+    justify-content: end;
+    gap: 0.5rem;
+  }
+  .new-drawings .slideshow hgroup.slide-info {
+    padding-inline: 6% 0;
+    margin-block: 0rem;
+  }
+  .new-drawings .slideshow hgroup.slide-info h3 {
+    font-size: 2.75rem;
+    color: #c6ac82;
+  }
+  .new-drawings .slideshow hgroup.slide-info p.slide-caption {
+    color: #c6ac82;
+    padding: 0;
+    font-size: 1rem;
+  }
+  .new-drawings .slideshow .rider {
+    grid-area: rider;
+    text-align: left;
+  }
+  .new-drawings .slideshow .rider span {
+    display: inline;
+  }
+  .broadsheet {
+    grid-template-columns: 69% 3% 28%;
+    grid-template-areas: "hero . ." "hero . broadsheettext" "hero . spread" "rider rider rider";
+    gap: 1rem;
+    padding-inline: 0rem;
+    margin-inline: 0 6%;
+  }
+  .broadsheet .broadsheet-info {
+    grid-area: 2/2/3/4;
+    column-span: 2/4;
+  }
+  .broadsheet .broadsheet-info .broadsheet-text {
+    padding-inline: 0rem;
+  }
+  .broadsheet .broadsheet-info .broadsheet-text h2 {
+    font-size: 2rem;
+  }
+  .broadsheet .broadsheet-info .broadsheet-text p {
+    padding-inline: 0rem 1rem;
+  }
+  .broadsheet .broadsheet-info .broadsheet-text p.first {
+    font-size: 1.33rem;
+  }
+  .broadsheet .hero {
+    grid-area: 1/1/3/3;
+    padding: 0;
+    margin: 0;
+  }
+  .broadsheet .spread {
+    grid-area: 2/2/3/4;
+    width: 96%;
+    margin: 0;
+    padding: 1rem 0rem 0 0;
+    position: static;
+  }
+  .broadsheet .spread img {
+    width: 100%;
+  }
+  .broadsheet .rider {
+    padding: 0;
+  }
+  .giclee {
+    padding: 6% 1% 4.5% 3%;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-template-areas: "gicleeprintwrap gicleeinfo";
+    background: rgb(240, 237, 231);
+    background: linear-gradient(180deg, rgb(240, 237, 231) 0%, rgb(240, 237, 231) 87%, rgb(255, 255, 255) 87%, rgb(255, 255, 255) 100%);
+    gap: 2rem;
+  }
+  .giclee .giclee-info {
+    grid-area: gicleeinfo;
+  }
+  .giclee .giclee-info hgroup {
+    padding-inline: 2rem 9rem;
+  }
+  .giclee .giclee-info figure {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-content: center;
+  }
+  .giclee .print-wrap {
+    grid-area: gicleeprintwrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .giclee .print-wrap img {
+    width: 100%;
+    object-fit: contain;
+    line-height: 1;
+  }
+  .giclee .print-wrap img:last-of-type {
+    display: none;
+  }
+  footer .taitgh-cta {
+    padding: 1rem 3rem;
+    font-size: 1.33rem;
+  }
+  footer .logotype {
+    letter-spacing: 1px;
+  }
+}
+@media only screen and (min-width: 1280px) {
   section {
     padding: 6% 3% 3%;
   }
@@ -569,6 +746,9 @@ footer .return-to-top a img {
     width: 100%;
     object-fit: contain;
     line-height: 1;
+  }
+  .giclee .print-wrap img:last-of-type {
+    display: block;
   }
   footer .taitgh-cta {
     padding: 1rem 3rem;
