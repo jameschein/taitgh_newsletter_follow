@@ -8,12 +8,13 @@ h3, h2, h1 {
 }
 
 .rider {
+  grid-area: rider;
   display: block;
   font-family: "Lato", sans-serif;
   text-transform: uppercase;
   font-size: 0.6rem;
   letter-spacing: 1px;
-  line-height: 1rem;
+  line-height: 0.85rem;
   margin-inline: 6% 3%;
   text-align: right;
 }
@@ -64,10 +65,10 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.66rem;
   text-transform: capitalize;
   letter-spacing: 0;
-  padding-block: 1rem;
+  padding-block: 0 1rem;
 }
 
 p {
@@ -110,41 +111,57 @@ section hgroup h2 span.secondary-heading {
   text-transform: none;
 }
 
-.new-drawings .rider {
-  text-align: left;
-  margin: 0;
-  padding-inline: 0 12%;
-}
-.new-drawings .rider span {
-  display: block;
-  padding-inline: 0.5rem 0;
-}
 .new-drawings .slideshow {
   display: grid;
-  grid-template-columns: 100%;
-  grid-template-areas: "slide-container" "controls" "info";
+  grid-template-columns: 33% auto;
+  gap: 0.5rem;
+  grid-template-areas: "intro intro" "slide-container slide-container" "controls ." "info info" "rider rider";
   position: relative;
+}
+.new-drawings .slideshow .slideshow-intro {
+  grid-area: intro;
 }
 .new-drawings .slideshow .slide-container {
   grid-area: slide-container;
-  width: 90vw;
-  height: 330px;
-  text-align: right;
+  display: block;
+  width: 105%;
+  margin-block: 0 0.5rem;
 }
 .new-drawings .slideshow .slide-container .slide {
-  width: auto;
-  height: 100%;
-  object-fit: contain;
+  display: block;
+  margin: 0 0 0 auto;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
   border: 1px solid #d7b285;
+}
+.new-drawings .slideshow .slide-container .slide.landscape {
+  width: 100%;
+}
+.new-drawings .slideshow .slide-container .slide.portrait {
+  width: 69%;
+}
+.new-drawings .slideshow hgroup.slide-info {
+  grid-area: info;
+  margin-left: 0%;
+  margin-block: 1rem;
+}
+.new-drawings .slideshow hgroup.slide-info .slide-caption {
+  font-size: 1.25rem;
+  padding-right: 12%;
+  margin-block: 0 1rem;
+}
+.new-drawings .slideshow hgroup.slide-info h3 {
+  margin-block: 0;
+  line-height: 1;
 }
 .new-drawings .slideshow .slider-controls {
   grid-area: controls;
-  position: absolute;
-  bottom: 30%;
-  width: 31.5%;
-  padding-block: 0 1rem;
+  width: 100%;
+  padding-block: 0.5rem 0;
   display: flex;
   flex-direction: column;
+  margin-block: -1rem 0;
 }
 .new-drawings .slideshow .slider-controls .instruction {
   font-family: "Lato", sans-serif, "Gill Sans", sans-serif;
@@ -152,7 +169,7 @@ section hgroup h2 span.secondary-heading {
   letter-spacing: 1px;
   font-size: 0.66rem;
   line-height: 1.25;
-  padding-left: 0.25rem;
+  padding-inline: 0.25rem 0;
   margin-bottom: 0.5rem;
 }
 .new-drawings .slideshow .slider-controls .indicators {
@@ -198,18 +215,14 @@ section hgroup h2 span.secondary-heading {
 .new-drawings .slideshow .slider-controls .button-group .arrow.prev {
   background-image: url("../images/taitgh-newsletter-button-next.svg");
 }
-.new-drawings .slideshow hgroup.slide-info {
-  grid-area: info;
-  margin-left: 0%;
+.new-drawings .slideshow .slider-controls .rider {
+  text-align: left;
+  margin: 0;
+  padding-inline: 0 6%;
 }
-.new-drawings .slideshow hgroup.slide-info .slide-caption {
-  font-size: 1.25rem;
-  padding-right: 24%;
-  margin-block: 0 1rem;
-}
-.new-drawings .slideshow hgroup.slide-info h3 {
-  margin-block: 0;
-  line-height: 1;
+.new-drawings .slideshow .slider-controls .rider span {
+  display: block;
+  padding-inline: 0.5rem 0;
 }
 
 .broadsheet {
@@ -343,21 +356,111 @@ footer .return-to-top a img {
   height: auto;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 568px) {
   .new-drawings .slideshow {
     grid-template-columns: 33% 1fr;
-    grid-template-areas: "info slide-container" "controls slide-container";
+    grid-template-areas: "intro intro" "slide-container slide-container" "controls info" "rider rider";
+    justify-content: start;
+    gap: 0;
   }
   .new-drawings .slideshow .slide-container {
-    width: 100%;
-    grid-area: slide-container;
+    margin-block: 0 0.5rem;
+  }
+  .new-drawings .slideshow .slide-container .slide {
+    margin: 0 4.5rem 0 auto;
+    width: 105%;
   }
   .new-drawings .slideshow .slider-controls {
     grid-area: controls;
-    position: static;
+    width: 60%;
   }
   .new-drawings .slideshow .slider-info {
-    grid-are: info;
+    grid-area: info;
+    width: 100%;
+  }
+  .new-drawings .slideshow .slider-info hgroup {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 667px) {
+  .new-drawings .slideshow .slide-container {
+    margin-block: 0 0.5rem;
+  }
+}
+@media only screen and (min-width: 736px) {
+  .new-drawings .slideshow .slide-container {
+    margin-block: 0 0.5rem;
+  }
+}
+@media only screen and (min-width: 833px) {
+  .new-drawings .slideshow {
+    grid-template-columns: 27% 1fr;
+  }
+  .new-drawings .slideshow .slide-container {
+    margin-block: 0 0.5rem;
+  }
+}
+@media only screen and (min-width: 980px) {
+  section {
+    padding: 6% 3% 3%;
+  }
+  .new-drawings .slideshow {
+    grid-template-columns: 27% 1fr 1fr;
+    grid-template-areas: "intro slide-container slide-container" "info slide-container slide-container" "controls slide-container slide-container" ". slide-container slide-container" ". rider rider";
+    gap: 3rem;
+  }
+  .new-drawings .slideshow .slideshow-intro {
+    grid-area: intro;
+  }
+  .new-drawings .slideshow .slideshow-intro h2 {
+    color: #d7b285;
+  }
+  .new-drawings .slideshow .slideshow-intro p.first {
+    color: #d7b285;
+    font-size: 1.125rem;
+  }
+  .new-drawings .slideshow .slide-container {
+    margin-block: 0 0.5rem;
+    display: grid;
+    grid-template-areas: "slide";
+    grid-template-columns: 100%;
+    justify-content: center;
+    align-items: end;
+  }
+  .new-drawings .slideshow .slide-container .slide {
+    grid-area: slide;
+  }
+  .new-drawings .slideshow .slider-controls {
+    width: 100%;
+  }
+  .new-drawings .slideshow .slider-controls p {
+    text-align: right;
+  }
+  .new-drawings .slideshow .slider-controls .indicators {
+    justify-content: end;
+    gap: 0.5rem;
+  }
+  .new-drawings .slideshow hgroup.slide-info {
+    padding-inline: 6% 0;
+    margin-block: 0rem;
+  }
+  .new-drawings .slideshow hgroup.slide-info h3 {
+    font-size: 2.5rem;
+    color: #d7b285;
+  }
+  .new-drawings .slideshow hgroup.slide-info p.slide-caption {
+    color: #d7b285;
+    padding: 0;
+    font-size: 1rem;
+  }
+  .new-drawings .slideshow .rider {
+    grid-area: rider;
+    text-align: left;
+  }
+  .new-drawings .slideshow .rider span {
+    display: inline;
   }
 }
 
