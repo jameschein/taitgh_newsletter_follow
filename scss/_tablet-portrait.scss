@@ -7,6 +7,10 @@
       img {
         width: 100%;
         object-fit: cover;
+
+        &:last-of-type {
+          display: block;
+        }
       }
     }
   }
