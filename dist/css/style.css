@@ -428,7 +428,7 @@ footer .return-to-top a img {
     margin-block: 0 0.5rem;
   }
 }
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 980px) and (orientation: landscape) {
   .wrapper {
     margin-inline: 0;
   }
