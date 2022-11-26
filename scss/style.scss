@@ -278,7 +278,7 @@ section {
   display: grid;
   grid-template-columns: 100%;
   grid-template-areas:
-    "broadsheettext"
+    "broadsheetinfo"
     "hero"
     "rider";
   background-color: #fff;
@@ -297,27 +297,30 @@ section {
     }
   }
 
-  .broadsheet-text {
-    grid-area: broadsheettext;
-    padding-inline: 3% 12%;
+  .broadsheet-info {
+    grid-area: broadsheetinfo;
 
-    h2 {
-      line-height: 1.125;
-      span {
-        display: block;
+    .broadsheet-text {
+      padding-inline: 3% 12%;
+
+      h2 {
+        line-height: 1.125;
+        span {
+          display: block;
+        }
       }
     }
-  }
 
-  .spread {
-    width: 65%;
-    position: absolute;
-    margin-left: 24vw;
-    bottom: 5.25rem;
-    right: 2rem;
+    .spread {
+      width: 65%;
+      position: absolute;
+      margin-left: 24vw;
+      bottom: 5.25rem;
+      right: 2rem;
 
-    img {
-      width: 66vw;
+      img {
+        width: 66vw;
+      }
     }
   }
 

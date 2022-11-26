@@ -228,7 +228,7 @@ section hgroup h2 span.secondary-heading {
 .broadsheet {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-areas: "broadsheettext" "hero" "rider";
+  grid-template-areas: "broadsheetinfo" "hero" "rider";
   background-color: #fff;
   padding-block: 3rem;
   padding-inline: 0rem;
@@ -243,24 +243,26 @@ section hgroup h2 span.secondary-heading {
   width: 100%;
   object-fit: cover;
 }
-.broadsheet .broadsheet-text {
-  grid-area: broadsheettext;
+.broadsheet .broadsheet-info {
+  grid-area: broadsheetinfo;
+}
+.broadsheet .broadsheet-info .broadsheet-text {
   padding-inline: 3% 12%;
 }
-.broadsheet .broadsheet-text h2 {
+.broadsheet .broadsheet-info .broadsheet-text h2 {
   line-height: 1.125;
 }
-.broadsheet .broadsheet-text h2 span {
+.broadsheet .broadsheet-info .broadsheet-text h2 span {
   display: block;
 }
-.broadsheet .spread {
+.broadsheet .broadsheet-info .spread {
   width: 65%;
   position: absolute;
   margin-left: 24vw;
   bottom: 5.25rem;
   right: 2rem;
 }
-.broadsheet .spread img {
+.broadsheet .broadsheet-info .spread img {
   width: 66vw;
 }
 .broadsheet .rider {
@@ -690,7 +692,7 @@ footer .return-to-top a img {
     font-size: 1.33rem;
   }
   .broadsheet .broadsheet-info .spread {
-    width: 96%;
+    width: 100%;
     margin: 0;
     padding: 1rem 0rem 0 0;
     position: static;
