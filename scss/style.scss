@@ -1,5 +1,6 @@
 $col-section-tan: #f2eee7;
-$col-gold-text: #c6ac82;
+// $col-gold-text: #c6ac82;
+$col-gold-text: #d7b285;
 $col-gold-headers: darken($col-gold-text, 15%);
 $col-link: darken($col-gold-text, 30%);
 
@@ -68,7 +69,7 @@ a {
 h1 {
   @extend %header-standard;
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 h2 {
@@ -440,7 +441,7 @@ footer {
       padding-right: 0.5rem;
 
       img {
-        width: 70%;
+        width: 80%;
         display: block;
         margin: 0 auto;
       }
