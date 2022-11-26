@@ -247,7 +247,7 @@ section {
           background-size: contain;
           outline: 0;
 
-          button::-moz-focus-inner {
+          ::-moz-focus-inner {
             border: 0;
           }
 
@@ -357,7 +357,7 @@ section {
     flex-wrap: wrap;
     gap: 1rem;
 
-    a {
+    .print {
       display: block;
       border: 1px solid $col-section-tan;
       width: 47%;
