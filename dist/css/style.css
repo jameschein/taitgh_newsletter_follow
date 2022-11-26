@@ -508,7 +508,7 @@ footer .return-to-top a img {
   }
   .broadsheet {
     grid-template-columns: 69% 3% 28%;
-    grid-template-areas: "hero . ." "hero . broadsheettext" "hero . spread" "rider rider rider";
+    grid-template-areas: "hero . ." "hero . broadsheetinfo" "hero . broadsheetinfo" "rider rider rider";
     gap: 1rem;
     padding-inline: 0rem;
     margin-inline: 0 6%;
@@ -530,7 +530,6 @@ footer .return-to-top a img {
     font-size: 1.33rem;
   }
   .broadsheet .broadsheet-info .spread {
-    grid-area: 2/2/3/4;
     width: 100%;
     margin: 0;
     padding: 1rem 0rem 0 0;
@@ -671,7 +670,6 @@ footer .return-to-top a img {
   }
   .broadsheet {
     grid-template-columns: 69% 7.5% 23.5%;
-    grid-template-areas: "hero . ." "hero . broadsheettext" "hero . spread" "rider rider rider";
     gap: 1rem;
     padding-inline: 0 6rem;
   }
@@ -691,20 +689,19 @@ footer .return-to-top a img {
   .broadsheet .broadsheet-info .broadsheet-text p.first {
     font-size: 1.33rem;
   }
-  .broadsheet .hero {
-    grid-area: 1/1/3/3;
-    padding: 0;
-    margin: 0;
-  }
-  .broadsheet .spread {
-    grid-area: 2/2/3/4;
+  .broadsheet .broadsheet-info .spread {
     width: 96%;
     margin: 0;
     padding: 1rem 0rem 0 0;
     position: static;
   }
-  .broadsheet .spread img {
+  .broadsheet .broadsheet-info .spread img {
     width: 100%;
+  }
+  .broadsheet .hero {
+    grid-area: 1/1/3/3;
+    padding: 0;
+    margin: 0;
   }
   .broadsheet .rider {
     padding: 0;

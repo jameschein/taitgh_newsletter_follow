@@ -125,8 +125,8 @@
     grid-template-columns: 69% 3% 28%;
     grid-template-areas:
       "hero . ."
-      "hero . broadsheettext"
-      "hero . spread"
+      "hero . broadsheetinfo"
+      "hero . broadsheetinfo"
       "rider rider rider";
     gap: 1rem;
     padding-inline: 0rem;
@@ -153,7 +153,6 @@
       }
 
       .spread {
-        grid-area: 2/2/3/4;
         width: 100%;
         margin: 0;
         padding: 1rem 0rem 0 0;

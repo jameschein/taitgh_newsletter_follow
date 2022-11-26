@@ -115,11 +115,6 @@
 
   .broadsheet {
     grid-template-columns: 69% 7.5% 23.5%;
-    grid-template-areas:
-      "hero . ."
-      "hero . broadsheettext"
-      "hero . spread"
-      "rider rider rider";
     gap: 1rem;
     padding-inline: 0 6rem;
 
@@ -142,24 +137,23 @@
           }
         }
       }
+
+      .spread {
+        width: 96%;
+        margin: 0;
+        padding: 1rem 0rem 0 0;
+        position: static;
+
+        img {
+          width: 100%;
+        }
+      }
     }
 
     .hero {
       grid-area: 1/1/3/3;
       padding: 0;
       margin: 0;
-    }
-
-    .spread {
-      grid-area: 2/2/3/4;
-      width: 96%;
-      margin: 0;
-      padding: 1rem 0rem 0 0;
-      position: static;
-
-      img {
-        width: 100%;
-      }
     }
 
     .rider {
