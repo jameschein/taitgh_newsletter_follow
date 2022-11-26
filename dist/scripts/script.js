@@ -1,5 +1,4 @@
 window.addEventListener("DOMContentLoaded", () => {
-  let currentIndex = 0
   let {documentElement: html, body} = document
   let defaultHtmlOverflow, defaultBodyOverflow
 
@@ -17,7 +16,8 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  let showScroll = () => {
+  let showScroll = (index) => {
+    console.log("pers" + index)
     // show overflow
     html.style.overflowY = defaultHtmlOverflow
     body.style.overflowY = defaultHtmlOverflow
@@ -29,13 +29,12 @@ window.addEventListener("DOMContentLoaded", () => {
 
   setOfImages.map((element, index) => {
     element.addEventListener("click", (e) => {
+      console.log(index)
       e.preventDefault()
-      currentIndex = index++
-
       BigPicture({
         el: e.target,
         gallery: document.querySelectorAll("#printwrap .print"),
-        position: currentIndex,
+        position: index,
         loop: true,
 
         // animationStart executed immediately before open animation starts
@@ -45,7 +44,7 @@ window.addEventListener("DOMContentLoaded", () => {
           console.log("it has opened")
         },
         // onClose executed immediately after close animation finishes
-        onClose: showScroll(),
+        onClose: showScroll(index),
         // onChangeImage executed on gallery image change
         onChangeImage: function (props) {
           console.log("gallery image changed", props)
