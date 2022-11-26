@@ -235,7 +235,7 @@ section hgroup h2 span.secondary-heading {
   position: relative;
 }
 .broadsheet .hero {
-  grid-area: hero;
+  grid-area: 2/1/3/2;
   width: 100%;
   padding-bottom: 6rem;
 }
@@ -244,7 +244,7 @@ section hgroup h2 span.secondary-heading {
   object-fit: cover;
 }
 .broadsheet .broadsheet-info {
-  grid-area: broadsheetinfo;
+  grid-area: 1/1/2/2;
 }
 .broadsheet .broadsheet-info .broadsheet-text {
   padding-inline: 3% 12%;
