@@ -418,6 +418,7 @@ footer .return-to-top a img {
   }
   .giclee .print-wrap img {
     width: 100%;
+    object-fit: cover;
   }
 }
 @media only screen and (min-width: 980px) and (orientation: landscape) {
