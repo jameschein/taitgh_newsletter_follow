@@ -360,13 +360,14 @@ section {
     a {
       display: block;
       border: 1px solid $col-section-tan;
-      width: 100%;
+      width: 47%;
 
       &:last-of-type {
         display: none;
       }
 
       img {
+        display: block;
         width: 100%;
         object-fit: contain;
       }
