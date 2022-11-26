@@ -517,7 +517,6 @@ footer .return-to-top a img {
   }
   .broadsheet .broadsheet-info {
     grid-area: 2/2/3/4;
-    column-span: 2/4;
   }
   .broadsheet .broadsheet-info .broadsheet-text {
     padding-inline: 0rem;
