@@ -135,6 +135,8 @@
     .broadsheet-info {
       grid-area: 2/2/3/4;
 
+      width: 100%;
+
       .broadsheet-text {
         padding-inline: 0rem;
 
@@ -155,8 +157,7 @@
         width: 100%;
         margin: 0;
         padding: 1rem 0rem 0 0;
-        position: relative;
-        inset: unset;
+        position: static;
 
         img {
           width: 100%;
