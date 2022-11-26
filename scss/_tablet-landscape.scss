@@ -133,9 +133,9 @@
     margin-inline: 0 6%;
 
     .broadsheet-info {
-      grid-area: 2/2/3/4;
-
       width: 100%;
+
+      grid-area: 2/2/3/4;
 
       .broadsheet-text {
         padding-inline: 0rem;
@@ -154,12 +154,16 @@
       }
 
       .spread {
+        display: flex;
         width: 100%;
         margin: 0;
         padding: 1rem 0rem 0 0;
         position: static;
 
         img {
+          justify-content: center;
+          align-items: center;
+
           width: 100%;
           object-fit: contain;
         }
