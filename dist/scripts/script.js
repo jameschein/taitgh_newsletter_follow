@@ -4,7 +4,7 @@ window.addEventListener("DOMContentLoaded", () => {
   setOfImages.map((element, index) => {
     element.addEventListener("click", (e) => {
       e.preventDefault()
-      BigPicture({
+      const bp = BigPicture({
         el: e.target,
         gallery: document.querySelectorAll("#printwrap .print"),
         position: index++,
