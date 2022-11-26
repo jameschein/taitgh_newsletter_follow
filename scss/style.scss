@@ -357,13 +357,18 @@ section {
     flex-wrap: wrap;
     gap: 1rem;
 
-    img {
+    a {
       display: block;
       border: 1px solid $col-section-tan;
       width: 47%;
 
       &:last-of-type {
         display: none;
+      }
+
+      img {
+        width: 100%;
+        object-fit: contain;
       }
     }
   }
