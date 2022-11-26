@@ -38,7 +38,7 @@ window.addEventListener("DOMContentLoaded", () => {
         loop: true,
 
         // animationStart executed immediately before open animation starts
-        animationStart: hideScroll,
+        animationStart: hideScroll(index),
         // animationEnd executed immediately after open animation finishes
         animationEnd: function () {
           console.log("it has opened")
