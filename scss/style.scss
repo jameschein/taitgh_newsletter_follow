@@ -360,6 +360,10 @@ section {
       display: block;
       border: 1px solid $col-section-tan;
       width: 47%;
+
+      &:last-of-type {
+        display: none;
+      }
     }
   }
 }
