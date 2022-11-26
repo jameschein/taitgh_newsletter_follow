@@ -245,6 +245,7 @@ section hgroup h2 span.secondary-heading {
 }
 .broadsheet .broadsheet-info {
   grid-area: 1/1/2/2;
+  background-color: red;
 }
 .broadsheet .broadsheet-info .broadsheet-text {
   padding-inline: 3% 12%;
