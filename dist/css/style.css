@@ -543,13 +543,14 @@ footer .return-to-top a img {
   }
   .broadsheet .spread {
     grid-area: 2/2/3/4;
-    width: 96%;
+    width: 100%;
     margin: 0;
     padding: 1rem 0rem 0 0;
     position: static;
   }
   .broadsheet .spread img {
     width: 100%;
+    object-fit: cover;
   }
   .broadsheet .rider {
     padding: 0;
