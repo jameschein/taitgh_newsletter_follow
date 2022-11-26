@@ -195,10 +195,12 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
 
-      img {
-        width: 100%;
-        object-fit: contain;
-        line-height: 1;
+      a {
+        img {
+          width: 100%;
+          object-fit: contain;
+          line-height: 1;
+        }
 
         &:last-of-type {
           display: block;
