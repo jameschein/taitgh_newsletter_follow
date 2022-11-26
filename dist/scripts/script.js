@@ -17,7 +17,6 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   let showScroll = (index) => {
-    console.log("pers" + index)
     // show overflow
     html.style.overflowY = defaultHtmlOverflow
     body.style.overflowY = defaultHtmlOverflow
