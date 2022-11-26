@@ -534,7 +534,8 @@ footer .return-to-top a img {
     width: 100%;
     margin: 0;
     padding: 1rem 0rem 0 0;
-    position: static;
+    position: relative;
+    inset: unset;
   }
   .broadsheet .broadsheet-info .spread img {
     width: 100%;
@@ -693,7 +694,6 @@ footer .return-to-top a img {
     width: 100%;
     margin: 0;
     padding: 1rem 0rem 0 0;
-    position: static;
   }
   .broadsheet .broadsheet-info .spread img {
     width: 100%;
