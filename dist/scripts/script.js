@@ -4,9 +4,23 @@ window.addEventListener("DOMContentLoaded", () => {
   })
 
   const setOfImages = document.querySelectorAll("#printwrap .print")
+  const setOfNewDrawings = document.querySelectorAll(".slideshow .slide-link")
 
   for (let link of setOfImages) {
     link.addEventListener("click", openGallery)
+  }
+
+  for (let link of setOfNewDrawings) {
+    link.addEventListener("click", openDrawings)
+  }
+
+  // open BiggerPicture
+  function openDrawings(e) {
+    e.preventDefault()
+    bp.open({
+      items: setOfNewDrawings,
+      el: e.currentTarget,
+    })
   }
 
   // open BiggerPicture

@@ -6,7 +6,7 @@
   .logotype,
   h2,
   p {
-    color: $col-gold-text;
+    color: darken($col-gold-text, 10%);
   }
 
   h2 {
@@ -14,10 +14,10 @@
   }
 
   p {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
 
     &.first {
-      font-size: 1.33rem;
+      font-size: 1.5rem;
     }
   }
 
@@ -46,13 +46,13 @@
         grid-area: intro;
 
         h2 {
-          color: $col-gold-text;
+          color: darken($col-gold-text, 10%);
           font-size: 1.75rem;
         }
 
         p {
           &.first {
-            color: $col-gold-text;
+            color: darken($col-gold-text, 10%);
           }
         }
       }
@@ -88,21 +88,33 @@
         padding-inline: 6% 0;
         margin-block: 0rem;
 
+        h3,
+        p {
+          color: darken($col-gold-text, 10%);
+          &.slide-caption {
+            color: darken($col-gold-text, 10%);
+          }
+        }
+
         h3 {
           font-size: 2.75rem;
-          color: $col-gold-text;
         }
 
         p {
           &.slide-caption {
-            color: $col-gold-text;
             padding: 0;
-            font-size: 1rem;
+            font-size: 1.25rem;
           }
+        }
+
+        .rider {
+          text-align: left;
+          padding: 0;
+          margin: 0;
         }
       }
 
-      .rider {
+      .rider-layout {
         grid-area: rider;
         text-align: left;
 
