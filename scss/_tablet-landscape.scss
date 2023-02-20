@@ -39,7 +39,7 @@
     .slideshow {
       grid-template-columns: 28.5% 1fr 1fr;
       grid-template-areas:
-        "intro slide-container slide-container"
+        "intro intro ."
         "info slide-container slide-container"
         "controls slide-container slide-container"
         ". slide-container slide-container"
@@ -215,6 +215,13 @@
       grid-area: gicleeprintwrap;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+
+      .print {
+        height: fit-content;
+        &:last-of-type {
+          display: none;
+        }
+      }
 
       img {
         width: 100%;

@@ -1,0 +1,108 @@
+{ "NewDrawings" : [
+    {
+      "title": "Meditation App",
+      "caption": "Uncannily still for over an hour staring at the screen.",
+      "orientation": "landscape",
+      "imageSources": [
+        "iphone/landscape/NGA2BW2022477-meditation-app-140922.jpg",
+        "ipad/landscape/NGA2BW2022477-meditation-app-140922.jpg",
+        "desktop/landscape/NGA2BW2022477-meditation-app-140922.jpg"
+      ]
+    },
+    {
+      "title": "Thousand Kisses Deep at Lautrec",
+      "caption": "A beautiful gamut of portraits in Room 43.",
+      "orientation": "landscape",
+      "imageSources": [
+        "iphone/landscape/NGA1BW2022-thousand-kisses-deep-at-lautrec.jpg",
+        "ipad/landscape/NGA1BW2022-thousand-kisses-deep-at-lautrec.jpg",
+        "desktop/landscape/NGA1BW2022-thousand-kisses-deep-at-lautrec.jpg"
+      ]
+    },
+    {
+      "title": "Thick &amp; Thin in Room 41",
+      "caption": "Business conveyed via line weight and compositional chaos.",
+      "orientation": "landscape",
+      "imageSources": [
+        "iphone/landscape/NGA1BW2022268-thick-and-thin-in-room-41.jpg",
+        "ipad/landscape/NGA1BW2022268-thick-and-thin-in-room-41.jpg",
+        "desktop/landscape/NGA1BW2022268-thick-and-thin-in-room-41.jpg"
+      ]
+    },
+    {
+      
+      "title": "Map Reader and Texter",
+      "caption": "Anything but the art. At rest in Room 42.",
+      "orientation": "portrait",
+      "imageSources": [
+        "iphone/portrait/NGA2BW2022489-map-reader-and-texter.jpg",
+        "ipad/portrait/NGA2BW2022489-map-reader-and-texter.jpg",
+        "desktop/portrait/NGA2BW2022489-map-reader-and-texter.jpg"
+      ]
+    },
+    {
+      
+      "title": "Phoniacal, Wood For The Trees",
+      "caption": "Fetching up for a data stretch in Room 41",
+      "orientation": "landscape",
+      "imageSources": [
+        "iphone/landscape/NGA1BW2022285-phoniacs-wood-for-trees.jpg",
+        "ipad/landscape/NGA1BW2022285-phoniacs-wood-for-trees.jpg",
+        "desktop/landscape/NGA1BW2022285-phoniacs-wood-for-trees.jpg"
+      ]
+    },
+    {
+     
+      "title": "Denim at Delacroix",
+      "caption": "Denim at Delacroix",
+      "orientation": "portrait",
+      "imageSources": [
+        "iphone/portrait/NGA2BW2022497-denim-at-delacroix.jpg",
+        "ipad/portrait/NGA2BW2022497-denim-at-delacroix.jpg",
+        "desktop/portrait/NGA2BW2022497-denim-at-delacroix.jpg"
+      ]
+    },
+    {
+      
+      "title": "Conversing at Delacroix",
+      "caption": "Conversing at Delacroix",
+      "orientation": "portrait",
+      "imageSources": [
+        "iphone/portrait/NGA2BW2022498-conversing-at-delacroix-121022.jpg",
+        "ipad/portrait/NGA2BW2022498-conversing-at-delacroix-121022.jpg",
+        "desktop/portrait/NGA2BW2022498-conversing-at-delacroix-121022.jpg"
+      ]
+    },
+    {
+      "title": "Wild Drawing Group",
+      "caption": "Scattered around Room 41",
+      "orientation": "landscape",
+      "imageSources": [
+        "iphone/landscape/NGA1BW2022344-wild-drawing-group.jpg",
+        "ipad/landscape/NGA1BW2022344-wild-drawing-group.jpg",
+        "desktop/landscape/NGA1BW2022344-wild-drawing-group.jpg"
+      ]
+    },
+    {
+      
+      "title": "Three Men at Sorolla's Drunkards",
+      "caption": "Three Men at Sorolla's Drunkards",
+      "orientation": "landscape",
+      "imageSources": [
+        "iphone/landscape/NGA1BW2022389-three-men-at-sorolla-drunkards.jpg",
+        "tablet/landscape/NGA1BW2022389-three-men-at-sorolla-drunkards.jpgg",
+        "desktop/landscape/NGA1BW2022389-three-men-at-sorolla-drunkards.jpg"
+      ]
+    },
+    {
+    
+      "title": "Gericault &amp; Delacroix",
+      "caption": "Gericault &amp; Delacroix",
+      "orientation": "landscape",
+      "imageSources": [
+        "iphone/portrait/NGA2BW2022499-gericault-and-delacroix.jpg",
+        "tpad/portrait/NGA2BW2022499-gericault-and-delacroix.jpg",
+        "desktop/portrait/NGA2BW2022499-gericault-and-delacroix.jpg"
+      ]
+    }
+  ] }

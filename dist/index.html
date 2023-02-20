@@ -16,7 +16,9 @@
     <script
       src="https://kit.fontawesome.com/98fc27b2a0.js"
       crossorigin="anonymous"></script>
+    <script src="scripts/slideshow.js" defer></script>
     <script src="scripts/bigger-picture.min.js" defer></script>
+
     <script src="scripts/script.js" defer></script>
   </head>
   <body>
@@ -38,7 +40,6 @@
                 A handful of uncharted new pieces made on my return to The
                 National Gallery after the final site launch rewarded me some
                 long overdue concentrated drawing time.
-                
               </p>
               <fn class="rider">
                 Use the controls below to preview the drawings.
@@ -46,9 +47,8 @@
               </fn>
             </hgroup>
 
-
-        
-              <picture class="slide-container">
+            <div class="slide-container">
+              <picture id="drawing1">
                 <source
                   media="(min-width:980px)"
                   srcset="
@@ -64,24 +64,22 @@
                   srcset="
                     images/drawings/iphone/landscape/NGA2BW2022477-meditation-app-140922.jpg
                   " />
-                  <a
+                <a
                   href="images/drawings/desktop/landscape/NGA2BW2022477-meditation-app-140922.jpg"
                   data-img="images/drawings/iphone/landscape/NGA2BW2022477-meditation-app-140922.jpg 1133w, images/drawings/desktop/landscape/NGA2BW2022477-meditation-app-140922.jpg 1667w"
                   data-thumb="images/drawings/iphone/landscape/NGA2BW2022477-meditation-app-140922.jpg"
                   data-height="1667"
                   data-width="2500"
                   data-alt="Insanely still for an hour."
-                  class="slide-link"
-                >
-                <img
-                  src="images/drawings/iphone/landscape/NGA2BW2022477-meditation-app-140922.jpg"
-                  alt="Meditation App"
-                  class="slide landscape" />
+                  class="slide-link">
+                  <img
+                    src="images/drawings/iphone/landscape/NGA2BW2022477-meditation-app-140922.jpg"
+                    alt="Meditation App"
+                    class="slide landscape" />
                 </a>
               </picture>
-              
+            </div>
 
-            </p>
             <nav class="slider-controls">
               <p class="instruction">Click image for larger view</p>
 
@@ -148,8 +146,8 @@
                 <a href="https://the newspaperclub.com" target="_blank">
                   The Newspaper Club
                 </a>
-                which allowed the dream of inexpensive reproduction of drawings to
-                scale to become a reality.
+                which allowed the dream of inexpensive reproduction of drawings
+                to scale to become a reality.
               </p>
             </div>
 

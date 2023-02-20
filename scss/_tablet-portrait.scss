@@ -2,11 +2,19 @@
   .giclee {
     .print-wrap {
       display: grid;
-      grid-template-columns: 31.5% 31.5% 31.5%;
+      grid-template-columns: repeat(3, 1fr);
+
+      .print {
+        width: 100%;
+
+        &:last-of-type {
+          display: block;
+        }
+      }
 
       img {
         width: 100%;
-        object-fit: cover;
+        object-fit: contain;
 
         &:last-of-type {
           display: block;
