@@ -212,10 +212,6 @@
     }
 
     .print-wrap {
-      grid-area: gicleeprintwrap;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-
       .print {
         &:last-of-type {
           display: none;
