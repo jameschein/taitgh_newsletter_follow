@@ -600,6 +600,11 @@ footer .return-to-top a img {
     justify-content: left;
     align-content: center;
   }
+  .giclee .print-wrap {
+    grid-area: gicleeprintwrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
   .giclee .print-wrap .print:last-of-type {
     display: none;
   }
@@ -616,7 +621,7 @@ footer .return-to-top a img {
     letter-spacing: 1px;
   }
 }
-@media only screen and (min-width: 1081px) {
+@media only screen and (min-width: 1280px) {
   section {
     padding: 6% 3% 3%;
   }
@@ -789,3 +794,5 @@ footer .return-to-top a img {
     letter-spacing: 1px;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
