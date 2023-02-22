@@ -204,7 +204,7 @@
     .print-wrap {
       grid-area: gicleeprintwrap;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 30%);
 
       .print {
         width: 100%;
