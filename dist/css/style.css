@@ -3,20 +3,24 @@ h3, h2, h1 {
   font-weight: 400;
   letter-spacing: 2px;
   font-family: "Playfair Display", serif;
-  color: #ad894f;
+  color: #c48e4b;
   line-height: 1.25;
 }
 
-.rider {
+.rider.rider-layout {
   grid-area: rider;
+  text-align: right;
+  margin-inline: 6% 3%;
+}
+
+.rider {
   display: block;
   font-family: "Lato", sans-serif;
   text-transform: uppercase;
   font-size: 0.6rem;
   letter-spacing: 1px;
   line-height: 0.85rem;
-  margin-inline: 6% 3%;
-  text-align: right;
+  text-align: left;
 }
 
 * {
@@ -32,7 +36,7 @@ html {
 }
 
 body {
-  color: #ad894f;
+  color: #c48e4b;
   padding: 1.5rem 0;
 }
 
@@ -51,12 +55,12 @@ header .chop {
 }
 
 a {
-  color: #785f37;
+  color: #936630;
 }
 
 h1 {
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 h2 {
@@ -73,10 +77,11 @@ h3 {
 
 p {
   margin-block: 0.5rem 0.25rem;
-  line-height: 1.125;
+  line-height: 1.25;
+  font-size: 1.25rem;
 }
 p.first {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   padding-block: 0.5rem;
 }
 p.first span {
@@ -133,7 +138,7 @@ section hgroup h2 span.secondary-heading {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border: 1px solid #c6ac82;
+  border: 1px solid #d7b285;
 }
 .new-drawings .slideshow .slide-container .slide.landscape {
   width: 100%;
@@ -188,7 +193,7 @@ section hgroup h2 span.secondary-heading {
   border-radius: 50%;
 }
 .new-drawings .slideshow .slider-controls .indicator:checked {
-  background-color: #c6ac82;
+  background-color: #d7b285;
 }
 .new-drawings .slideshow .slider-controls .button-group {
   display: flex;
@@ -206,7 +211,7 @@ section hgroup h2 span.secondary-heading {
   background-size: contain;
   outline: 0;
 }
-.new-drawings .slideshow .slider-controls .button-group .arrow button::-moz-focus-inner {
+.new-drawings .slideshow .slider-controls .button-group .arrow ::-moz-focus-inner {
   border: 0;
 }
 .new-drawings .slideshow .slider-controls .button-group .arrow.last {
@@ -214,6 +219,9 @@ section hgroup h2 span.secondary-heading {
 }
 .new-drawings .slideshow .slider-controls .button-group .arrow.prev {
   background-image: url("../images/taitgh-newsletter-button-next.svg");
+}
+.new-drawings .slideshow .slider-controls .rider-layout {
+  grid-area: rider;
 }
 .new-drawings .slideshow .slider-controls .rider {
   text-align: left;
@@ -264,6 +272,8 @@ section hgroup h2 span.secondary-heading {
 }
 .broadsheet .broadsheet-info .spread img {
   width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 .broadsheet .rider {
   grid-area: rider;
@@ -275,7 +285,7 @@ section hgroup h2 span.secondary-heading {
   background: linear-gradient(180deg, rgb(240, 237, 231) 0%, rgb(240, 237, 231) 96%, rgb(255, 255, 255) 96%, rgb(255, 255, 255) 100%);
 }
 .giclee figure {
-  width: 90%;
+  width: 100%;
 }
 .giclee figure img {
   width: 100%;
@@ -286,10 +296,18 @@ section hgroup h2 span.secondary-heading {
   flex-wrap: wrap;
   gap: 1rem;
 }
-.giclee .print-wrap img {
+.giclee .print-wrap .print {
   display: block;
   border: 1px solid #f2eee7;
   width: 47%;
+}
+.giclee .print-wrap .print:last-of-type {
+  display: none;
+}
+.giclee .print-wrap .print img {
+  display: block;
+  width: 100%;
+  object-fit: contain;
 }
 
 footer {
@@ -316,10 +334,10 @@ footer .logotype {
   font-weight: 100;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.25rem;
-  color: #c6ac82;
+  color: #d7b285;
 }
 footer .subhead {
-  color: #c6ac82;
+  color: #d7b285;
 }
 footer .socials {
   margin-block: 1rem;
@@ -333,7 +351,7 @@ footer .socials a {
   width: 24px;
   height: 24px;
   overflow: hidden;
-  color: #c6ac82;
+  color: #d7b285;
 }
 footer .socials a span {
   display: block;
@@ -352,13 +370,13 @@ footer .byline span {
   font-family: "Lato", sans-serif, sans-serif;
   text-transform: uppercase;
   font-size: 0.75rem;
-  margin-block: 0.25rem;
+  margin-block: 0.5rem;
   letter-spacing: 2px;
-  color: #c6ac82;
+  color: #d7b285;
   padding-right: 0.5rem;
 }
 footer .byline span img {
-  width: 70%;
+  width: 80%;
   display: block;
   margin: 0 auto;
 }
@@ -416,11 +434,20 @@ footer .return-to-top a img {
 @media only screen and (min-width: 767px) {
   .giclee .print-wrap {
     display: grid;
-    grid-template-columns: 31.5% 31.5% 31.5%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .giclee .print-wrap .print {
+    width: 100%;
+  }
+  .giclee .print-wrap .print:last-of-type {
+    display: block;
   }
   .giclee .print-wrap img {
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
+  }
+  .giclee .print-wrap img:last-of-type {
+    display: block;
   }
 }
 @media only screen and (min-width: 980px) {
@@ -434,7 +461,7 @@ footer .return-to-top a img {
   .logotype,
   h2,
   p {
-    color: #c6ac82;
+    color: #d7b285;
   }
   h2 {
     font-size: 2rem;
@@ -451,18 +478,18 @@ footer .return-to-top a img {
   }
   .new-drawings .slideshow {
     grid-template-columns: 28.5% 1fr 1fr;
-    grid-template-areas: "intro slide-container slide-container" "info slide-container slide-container" "controls slide-container slide-container" ". slide-container slide-container" ". rider rider";
+    grid-template-areas: "intro intro ." "info slide-container slide-container" "controls slide-container slide-container" ". slide-container slide-container" ". rider rider";
     gap: 2rem;
   }
   .new-drawings .slideshow .slideshow-intro {
     grid-area: intro;
   }
   .new-drawings .slideshow .slideshow-intro h2 {
-    color: #c6ac82;
+    color: #d7b285;
     font-size: 1.75rem;
   }
   .new-drawings .slideshow .slideshow-intro p.first {
-    color: #c6ac82;
+    color: #d7b285;
   }
   .new-drawings .slideshow .slideshow-intro p.first span {
     display: inline;
@@ -494,18 +521,18 @@ footer .return-to-top a img {
   }
   .new-drawings .slideshow hgroup.slide-info h3 {
     font-size: 2.75rem;
-    color: #c6ac82;
+    color: #d7b285;
   }
   .new-drawings .slideshow hgroup.slide-info p.slide-caption {
-    color: #c6ac82;
+    color: #d7b285;
     padding: 0;
     font-size: 1rem;
   }
-  .new-drawings .slideshow .rider {
+  .new-drawings .slideshow .rider-layout {
     grid-area: rider;
     text-align: left;
   }
-  .new-drawings .slideshow .rider span {
+  .new-drawings .slideshow .rider-layout span {
     display: inline;
   }
   .broadsheet {
@@ -516,9 +543,8 @@ footer .return-to-top a img {
     margin-inline: 0 6%;
   }
   .broadsheet .broadsheet-info {
-    grid-area: 2/2/3/4;
     width: 100%;
-    overflow: hidden;
+    grid-area: 2/2/3/4;
   }
   .broadsheet .broadsheet-info .broadsheet-text {
     padding-inline: 0rem;
@@ -533,14 +559,17 @@ footer .return-to-top a img {
     font-size: 1.33rem;
   }
   .broadsheet .broadsheet-info .spread {
+    display: flex;
     width: 100%;
     margin: 0;
     padding: 1rem 0rem 0 0;
     position: static;
   }
   .broadsheet .broadsheet-info .spread img {
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
   .broadsheet .hero {
     grid-area: 1/1/3/3;
@@ -571,18 +600,13 @@ footer .return-to-top a img {
     justify-content: left;
     align-content: center;
   }
-  .giclee .print-wrap {
-    grid-area: gicleeprintwrap;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  .giclee .print-wrap .print:last-of-type {
+    display: none;
   }
   .giclee .print-wrap img {
     width: 100%;
     object-fit: contain;
     line-height: 1;
-  }
-  .giclee .print-wrap img:last-of-type {
-    display: none;
   }
   footer .taitgh-cta {
     padding: 1rem 3rem;
@@ -592,23 +616,23 @@ footer .return-to-top a img {
     letter-spacing: 1px;
   }
 }
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1081px) {
   section {
     padding: 6% 3% 3%;
   }
   .logotype,
   h2,
   p {
-    color: #c6ac82;
+    color: #ca9a5f;
   }
   h2 {
     font-size: 2rem;
   }
   p {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
   p.first {
-    font-size: 1.33rem;
+    font-size: 1.5rem;
   }
   .new-drawings {
     margin-inline: 6rem;
@@ -617,18 +641,18 @@ footer .return-to-top a img {
   }
   .new-drawings .slideshow {
     grid-template-columns: 27% 1fr 1fr;
-    grid-template-areas: "intro slide-container slide-container" "info slide-container slide-container" "controls slide-container slide-container" ". slide-container slide-container" ". rider rider";
+    grid-template-areas: "intro slide-container slide-container" "info slide-container slide-container" "controls slide-container slide-container" ". rider rider";
     gap: 3rem;
   }
   .new-drawings .slideshow .slideshow-intro {
     grid-area: intro;
   }
   .new-drawings .slideshow .slideshow-intro h2 {
-    color: #c6ac82;
+    color: #ca9a5f;
     font-size: 1.75rem;
   }
   .new-drawings .slideshow .slideshow-intro p.first {
-    color: #c6ac82;
+    color: #ca9a5f;
   }
   .new-drawings .slideshow .slide-container {
     margin-block: 0 0.5rem;
@@ -636,10 +660,34 @@ footer .return-to-top a img {
     grid-template-areas: "slide";
     grid-template-columns: 100%;
     justify-content: center;
-    align-items: end;
+    align-items: center;
   }
   .new-drawings .slideshow .slide-container .slide {
     grid-area: slide;
+  }
+  .new-drawings .slideshow .slide-container hgroup.slide-info {
+    padding-inline: 6% 0;
+    margin-block: 0rem;
+  }
+  .new-drawings .slideshow .slide-container hgroup.slide-info h3,
+  .new-drawings .slideshow .slide-container hgroup.slide-info p {
+    color: #ca9a5f;
+  }
+  .new-drawings .slideshow .slide-container hgroup.slide-info h3.slide-caption,
+  .new-drawings .slideshow .slide-container hgroup.slide-info p.slide-caption {
+    color: #ca9a5f;
+  }
+  .new-drawings .slideshow .slide-container hgroup.slide-info h3 {
+    font-size: 2.75rem;
+  }
+  .new-drawings .slideshow .slide-container hgroup.slide-info p.slide-caption {
+    padding: 0;
+    font-size: 1.25rem;
+  }
+  .new-drawings .slideshow .slide-container hgroup.slide-info .rider {
+    text-align: left;
+    padding: 0;
+    margin: 0;
   }
   .new-drawings .slideshow .slider-controls {
     width: 100%;
@@ -651,24 +699,11 @@ footer .return-to-top a img {
     justify-content: end;
     gap: 0.5rem;
   }
-  .new-drawings .slideshow hgroup.slide-info {
-    padding-inline: 6% 0;
-    margin-block: 0rem;
-  }
-  .new-drawings .slideshow hgroup.slide-info h3 {
-    font-size: 2.75rem;
-    color: #c6ac82;
-  }
-  .new-drawings .slideshow hgroup.slide-info p.slide-caption {
-    color: #c6ac82;
-    padding: 0;
-    font-size: 1rem;
-  }
-  .new-drawings .slideshow .rider {
+  .new-drawings .slideshow .rider-layout {
     grid-area: rider;
     text-align: left;
   }
-  .new-drawings .slideshow .rider span {
+  .new-drawings .slideshow .rider-layout span {
     display: inline;
   }
   .broadsheet {
@@ -734,12 +769,16 @@ footer .return-to-top a img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-  .giclee .print-wrap img {
+  .giclee .print-wrap .print {
+    width: 100%;
+    height: 89.5%;
+  }
+  .giclee .print-wrap .print img {
     width: 100%;
     object-fit: contain;
     line-height: 1;
   }
-  .giclee .print-wrap img:last-of-type {
+  .giclee .print-wrap .print:last-of-type {
     display: block;
   }
   footer .taitgh-cta {
